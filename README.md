@@ -1,13 +1,8 @@
 Go Fish CLI
 ===========
+This was the final assignment for an intro to programming class taught by Jeff Schwaber in the spring of 2011. There's a *lot* of room for improvement here, but it was a good learning exercise.
 
-TODO:
------
-* deal with exceptions
-* use sort method to organize each player's hand?
-* find a way to prevent players from seeing each other's hands
-* show top card in discard pile so players can select it?
-* Fix "Your played cards are..." so it only displays the most recently played pair
+Below are the notes I kept while working on the project. They weren't intended for an audience beyond myself, so they might be a little cryptic, but hopefully they'll give you a sense of my thought process. (This was before I started using git, when my version control system was to save a new copy of the files at key points in the process, so the headings - "cardGame1", "cardGame2" and so on - refer to the directory I was working in at the time.)
 
 PROCESS NOTES:
 --------------
@@ -159,6 +154,11 @@ cardGame7
 - To solve the above problem, I need to reuse the "identify other player" code from the request_card method. So maybe move it into a separate MasterGame method?
 - Wrote identify_other_player function. NEXT TASK: implement and test.
 
-
-
+TODO:
+-----
+* deal with exceptions
+* use sort method to organize each player's hand?
+* find a way to prevent players from seeing each other's hands
+* show top card in discard pile so players can select it?
+* Fix "Your played cards are..." so it only displays the most recently played pair
 
