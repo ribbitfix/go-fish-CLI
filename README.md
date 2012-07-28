@@ -4,10 +4,9 @@ This was the final assignment for an intro to programming class taught by Jeff S
 
 Below are the notes I kept while working on the project. They weren't intended for an audience beyond myself, so they might be a little cryptic, but hopefully they'll give you a sense of my thought process. (This was before I started using git, when my version control system was to save a new copy of the files at key points in the process, so the headings - "cardGame1", "cardGame2" and so on - refer to the directory I was working in at the time.)
 
-PROCESS NOTES:
---------------
-cardGame1 (starting over on the Mac after the Dell died)
+cardGame1 
 ---------
+(starting over on the Mac after the Dell died)
 ### Sun 5/22
 * Created CardDeck and Player classes with one method each (prepare_deck and pick_a_card)
 * Created game01 to get them talking to each other. No dice.
@@ -20,8 +19,9 @@ cardGame1 (starting over on the Mac after the Dell died)
 * Solution: make deck = prepare_deck() instead of CardDeck object.
 * Problem: trying to call the pick_a_card function from within the draw_a_hand function, but the deck isn't getting passed to pick_a_card so it's popping from an empty list.
 
-cardGame2 (starting over after Jeff's lecture on objects)
+cardGame2 
 ---------
+(starting over after Jeff's lecture on objects)
 ### Mon 5/23 cont'd
 - Created MasterGame class with attributes: deck, number_of_players. Migrated prepare_deck method to this class.
 - Updated Player class:
@@ -105,8 +105,9 @@ NEXT TASKS:
 - Revised select_card_from_hand per Jeff's suggestion: changed "if rank in card" to "if rank == card[0]" because it's more precise and therefore less likely to cause problems.
 - NEXT TASK: reorganize code per Jeff's suggestion: have an "above function" to contain the simpler functions instead of having one function lead into the next.
 
-cardGame5 (reorganizing code per Jeff's suggestion, above)
+cardGame5 
 ---------
+(reorganizing code per Jeff's suggestion, above)
 ### Thurs 6/9
 - removed show_hand from request_card (not necessary - hand is still visible.)
 - tested start_turn method; changed name to new_turn
@@ -138,8 +139,10 @@ NEXT TASKS:
 - Changed "for player in game.players" to "for i in range(game.number_of_players)" and "game.player" statements to "game.players[i]"
 - IT WORKS! NEXT TASK: add code to "flag" block to determine if the game has been won.
 
-cardGame6 (made it work; will now attempt to make it good)
+cardGame6 
 ---------
+(made it work; will now attempt to make it good)
+
 - Consulted internet and learned that an empty list is falsy in Python.
 - added "if not game.players[i].hand" section to end of for loop.
 - discovered use case where one player gives away last card on other player's turn
